@@ -13,7 +13,7 @@
         android:layout_height="200dp"
         android:layout_gravity="center"
         android:clickable="true"
-        app:cardBackgroundColor="#A6B1EF"
+        app:cardBackgroundColor="?attr/cardBackgroundColor"
         app:cardCornerRadius="4dp"
         card_view:cardElevation="10dp">
 

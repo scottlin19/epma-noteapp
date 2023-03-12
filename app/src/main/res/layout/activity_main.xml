@@ -22,15 +22,6 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/Theme.Noteapp.PopupOverlay" >
 
-            <ImageButton
-                android:id="@+id/set_theme_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:backgroundTint="#00FFFFFF"
-                android:contentDescription="@string/set_theme"
-                android:minHeight="48dp"
-                app:srcCompat="@drawable/baseline_wb_sunny_white_24" />
         </androidx.appcompat.widget.Toolbar>
 
 
