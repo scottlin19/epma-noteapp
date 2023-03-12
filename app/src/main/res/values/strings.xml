@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">noteapp</string>
+    <string name="add_text">Add text</string>
+    <string name="create_new_note">Create new note</string>
+    <string name="create_new_title">New title</string>
+    <string name="title">Title</string>
+    <string name="text">Text</string>
+    <string name="set_theme">Set theme</string>
+    <string name="your_notes">Your Notes</string>
+    <string name="edit_note">Edit Note</string>
+</resources>
