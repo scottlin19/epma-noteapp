@@ -22,6 +22,25 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    // Specifies one flavor dimension.
+    flavorDimensions "colorTheme"
+    productFlavors {
+        purple {
+            // Assigns this product flavor to the "version" flavor dimension.
+            // If you are using only one dimension, this property is optional,
+            // and the plugin automatically assigns all the module's flavors to
+            // that dimension.
+            dimension "colorTheme"
+            applicationIdSuffix ".purple"
+            versionNameSuffix "-purple"
+        }
+        red {
+            dimension "colorTheme"
+            applicationIdSuffix ".red"
+            versionNameSuffix "-red"
+        }
+    }
+
     compileOptions {
         coreLibraryDesugaringEnabled true
         sourceCompatibility JavaVersion.VERSION_1_8

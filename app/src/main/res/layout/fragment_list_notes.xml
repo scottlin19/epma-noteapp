@@ -24,7 +24,7 @@
         android:clickable="true"
         android:contentDescription="@string/create_new_note"
         android:scaleType="fitXY"
-        app:backgroundTint="@color/purple_200"
+        app:backgroundTint="?attr/floatingActionButtonPrimaryStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_menu_add" />
