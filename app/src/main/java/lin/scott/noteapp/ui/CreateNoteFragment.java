@@ -53,6 +53,8 @@ public class CreateNoteFragment extends Fragment {
     ) {
 
         binding = FragmentCreateNoteBinding.inflate(inflater, container, false);
+        binding.editTitleTextInputLayout.setCounterMaxLength(MAX_TITLE_CHARS);
+        binding.editNoteTextInputLayout.setCounterMaxLength(MAX_CONTENT_CHARS);
         binding.editTitleTextInput.setFilters(new InputFilter[]{new InputFilter.LengthFilter(MAX_TITLE_CHARS)});
         binding.editNoteTextInput.setFilters(new InputFilter[]{new InputFilter.LengthFilter(MAX_CONTENT_CHARS)});
 

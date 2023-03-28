@@ -11,8 +11,8 @@ import lin.scott.noteapp.data.models.Note;
 @Entity(tableName = "note_table")
 public class NoteDB {
 
-    public static final int MAX_TITLE_CHARS    = 15;
-    public static final int MAX_CONTENT_CHARS  = 50;
+    public static final int MAX_TITLE_CHARS    = 50;
+    public static final int MAX_CONTENT_CHARS  = 100;
     @PrimaryKey(autoGenerate = true)
     private Long id;
 
