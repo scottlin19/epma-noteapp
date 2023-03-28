@@ -37,36 +37,12 @@ public abstract class NoteRoomDatabase extends RoomDatabase {
                     context.deleteDatabase(NOTE_DATABASE);
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                                     NoteRoomDatabase.class, NOTE_DATABASE)
-                            .addCallback(sRoomDatabaseCallback)
                             .build();
                 }
             }
         }
         return INSTANCE;
     }
-
-    private final static RoomDatabase.Callback sRoomDatabaseCallback = new RoomDatabase.Callback() {
-        @Override
-        public void onCreate(@NonNull SupportSQLiteDatabase db) {
-            super.onCreate(db);
-
-            // If you want to keep data through app restarts,
-            // comment out the following block
-            databaseWriteExecutor.execute(() -> {
-                // Populate the database in the background.
-                // If you want to start with more words, just add them.
-                NoteDao dao = INSTANCE.noteDao();
-                dao.deleteAll();
-
-                NoteDB note = new NoteDB("Hello", "World", Instant.now(), Instant.now());
-                dao.insert(note);
-                note = new NoteDB("Title placeholder", "Content", Instant.now(), Instant.now());
-                dao.insert(note);
-                note = new NoteDB("3rd note", "awesome!!!!", Instant.now(), Instant.now());
-                dao.insert(note);
-            });
-        }
-    };
 
 
 }
